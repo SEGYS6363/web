@@ -1,5 +1,6 @@
 
 document.addEventListener('DOMContentLoaded', function () {
+    // Установка поточного року в футері
     const yearElement = document.getElementById('currentYear');
     if (yearElement) {
         yearElement.textContent = new Date().getFullYear();
@@ -13,12 +14,12 @@ document.addEventListener('DOMContentLoaded', function () {
     if (menuToggle && closeMenu && mobileMenu) {
         menuToggle.addEventListener('click', function () {
             mobileMenu.classList.add('active');
-            document.body.style.overflow = 'hidden'; 
+            document.body.style.overflow = 'hidden'; // блокуємо скрол
         });
 
         closeMenu.addEventListener('click', function () {
             mobileMenu.classList.remove('active');
-            document.body.style.overflow = 'auto'; 
+            document.body.style.overflow = 'auto'; // повертаємо скрол
         });
     }
 
@@ -64,21 +65,21 @@ document.addEventListener('DOMContentLoaded', function () {
             const messageInput = contactForm.querySelector('textarea[name="message"]');
 
             if (!emailInput.value.includes('@')) {
-                alert('Пожалуйста, введите корректный email');
+                alert('Будь ласка, введіть коректний email');
                 return;
             }
 
             if (!nameInput.value.trim()) {
-                alert('Введите ваше имя');
+                alert('Введіть ваше ім’я');
                 return;
             }
 
             if (!messageInput.value.trim()) {
-                alert('Введите сообщение');
+                alert('Введіть повідомлення');
                 return;
             }
 
-            alert('Фрпма успешно отправлена');
+            alert('Форма успішно відправлена (демо)');
         });
     }
 });

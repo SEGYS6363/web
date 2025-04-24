@@ -1,3 +1,5 @@
+/* Стили для главной страницы */
+
 /* Hero секция */
 .hero-section {
   position: relative;
@@ -37,7 +39,6 @@
   width: 100%;
 }
 
-/* Большая надпись вместо логотипа */
 .mega-title {
   font-size: 180px;
   font-weight: 700;
@@ -85,7 +86,7 @@
   transform: rotate(90deg);
 }
 
-/* Секция слайдера - CSS-анимация */
+
 .slider-section {
   position: relative;
   padding: 80px 0;
@@ -146,7 +147,7 @@
   text-align: center;
 }
 
-/* CSS-анимация для автоматической смены слайдов */
+
 @keyframes slideshow {
   0%, 25% {
     opacity: 1;
@@ -203,7 +204,7 @@
   background-color: #22d3ee;
 }
 
-/* Секция превью услуг */
+
 .services-preview-section {
   position: relative;
   padding: 80px 0;
@@ -224,7 +225,7 @@
   margin-top: 48px;
 }
 
-/* Анимация при скролле для карточек услуг */
+
 .service-card {
   background-color: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(4px);
@@ -289,7 +290,7 @@
   text-align: center;
 }
 
-/* CTA секция */
+
 .cta-section {
   position: relative;
   padding: 80px 0;
@@ -329,12 +330,12 @@
   gap: 16px;
 }
 
-/* Убираем подчеркивание у всех ссылок */
+
 a {
   text-decoration: none;
 }
 
-/* Убираем стрелочки у кнопок */
+
 .btn i {
   display: none;
 }
@@ -382,7 +383,7 @@ a {
   }
 }
 
-/* Медиа запросы */
+
 @media (min-width: 768px) {
   .mega-title {
     font-size: 200px;
