@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Zone - Киберпанк игровой клуб</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Хедер -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">CYBER ZONE</a>
+                
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link active">Главная</a></li>
+                        <li><a href="about.html" class="nav-link">О клубе</a></li>
+                        <li><a href="services.html" class="nav-link">Услуги</a></li>
+                        <li><a href="contact.html" class="nav-link">Контакты</a></li>
+                    </ul>
+                </nav>
+                
+                <button class="btn btn-primary">Забронировать</button>
+                
+                <button class="menu-toggle" id="menuToggle">
+                    <span class="menu-icon"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Мобильное меню -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-container">
+            <button class="close-menu" id="closeMenu">×</button>
+            <ul class="mobile-nav-list">
+                <li><a href="index.html" class="mobile-nav-link active">Главная</a></li>
+                <li><a href="about.html" class="mobile-nav-link">О клубе</a></li>
+                <li><a href="services.html" class="mobile-nav-link">Услуги</a></li>
+                <li><a href="contact.html" class="mobile-nav-link">Контакты</a></li>
+            </ul>
+            <button class="btn btn-primary mobile-btn">Забронировать</button>
+        </div>
+    </div>
+
+    <main>
+        <!-- Секция Hero -->
+        <section class="hero-section">
+            <div class="hero-overlay"></div>
+            <div class="grid-pattern"></div>
+            
+            <div class="container">
+                <div class="hero-content">
+                    <!-- Удаляем логотип и заменяем на большую надпись -->
+                    <h1 class="mega-title">CYBER ZONE</h1>
+                    <p class="hero-subtitle">Киберпанк игровой опыт будущего</p>
+                    <div class="hero-buttons">
+                        <a href="#" class="btn btn-primary">Забронировать</a>
+                        <a href="services.html" class="btn btn-outline">Наши услуги</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="scroll-indicator">
+                <i class="icon-arrow-down"></i>
+            </div>
+        </section>
+
+        <!-- Секция слайдера -->
+        <section class="slider-section">
+            <div class="grid-pattern"></div>
+            <div class="container">
+                <h2 class="section-title">ИСПЫТАЙ БУДУЩЕЕ</h2>
+                
+                <div class="slider" id="mainSlider">
+                    <div class="slider-container">
+                        <div class="slide active">
+                            <img src="./img/style/турнирная зона.jpeg" alt="Игровые станции">
+                            <div class="slide-overlay"></div>
+                            <div class="slide-caption">Современные игровые станции</div>
+                        </div>
+                        <div class="slide">
+                            <img src="./img/style/vr.jpeg" alt="VR опыт">
+                            <div class="slide-overlay"></div>
+                            <div class="slide-caption">Иммерсивный VR опыт</div>
+                        </div>
+                        <div class="slide">
+                            <img src="./img/style/турниры.jpg" alt="Турнирная зона">
+                            <div class="slide-overlay"></div>
+                            <div class="slide-caption">Профессиональные турнирные установки</div>
+                        </div>
+                        <div class="slide">
+                            <img src="./img/style/аунж зона.jpg" alt="Лаунж зона">
+                            <div class="slide-overlay"></div>
+                            <div class="slide-caption">Киберпанк лаунж зона</div>
+                        </div>
+                    </div>
+                    
+                    <button class="slider-arrow slider-prev" id="sliderPrev">
+                        <i class="icon-chevron-left"></i>
+                    </button>
+                    <button class="slider-arrow slider-next" id="sliderNext">
+                        <i class="icon-chevron-right"></i>
+                    </button>
+                    
+                    <div class="slider-dots" id="sliderDots">
+                        <button class="slider-dot active" data-slide="0"></button>
+                        <button class="slider-dot" data-slide="1"></button>
+                        <button class="slider-dot" data-slide="2"></button>
+                        <button class="slider-dot" data-slide="3"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция услуг -->
+        <section class="services-preview-section">
+            <div class="gradient-overlay"></div>
+            <div class="container">
+                <h2 class="section-title">НАШИ УСЛУГИ</h2>
+                
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="icon-monitor"></i>
+                        </div>
+                        <h3 class="service-title">Мощные ПК</h3>
+                        <p class="service-description">Игровой опыт на наших современных компьютерах с новейшим оборудованием</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="icon-gamepad"></i>
+                        </div>
+                        <h3 class="service-title">Игровая зона</h3>
+                        <p class="service-description">Доступ к новейшим играм и VR-опыту в нашей иммерсивной игровой зоне</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="icon-trophy"></i>
+                        </div>
+                        <h3 class="service-title">Турниры</h3>
+                        <p class="service-description">Регулярные киберспортивные турниры с призами и профессиональной трансляцией</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="icon-users"></i>
+                        </div>
+                        <h3 class="service-title">Приватные комнаты</h3>
+                        <p class="service-description">Бронирование приватных комнат для командных тренировок или особых игровых событий</p>
+                    </div>
+                </div>
+                
+                <div class="services-cta">
+                    <a href="services.html" class="btn btn-primary">Все услуги</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция CTA -->
+        <section class="cta-section">
+            <div class="grid-pattern"></div>
+            <div class="container">
+                <h2 class="cta-title">ГОТОВ ВОЙТИ В МАТРИЦУ?</h2>
+                <p class="cta-description">Присоединяйся к нашему сообществу геймеров и испытай будущее игр уже сегодня.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary">Связаться с нами</a>
+                    <a href="about.html" class="btn btn-outline">О нас</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h3 class="footer-logo">CYBER ZONE</h3>
+                    <p class="footer-description">Киберпанк игровой опыт будущего в самом сердце города.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4 class="footer-title">Быстрые ссылки</h4>
+                    <ul class="footer-nav">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="about.html">О клубе</a></li>
+                        <li><a href="services.html">Услуги</a></li>
+                        <li><a href="contact.html">Контакты</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-services">
+                    <h4 class="footer-title">Услуги</h4>
+                    <ul class="footer-nav">
+                        <li><a href="services.html">Игровые ПК</a></li>
+                        <li><a href="services.html">VR опыт</a></li>
+                        <li><a href="services.html">Турниры</a></li>
+                        <li><a href="services.html">Приватные комнаты</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4 class="footer-title">Контакты</h4>
+                    <address class="footer-address">
+                        <p>ул. Кибер, 123</p>
+                        <p>Цифровой район</p>
+                        <p>Неон-Сити, 10101</p>
+                        <p class="footer-email">info@cyberzone.com</p>
+                        <p class="footer-phone">+7 (999) 123-4567</p>
+                    </address>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright">&copy; <span id="currentYear"></span> Cyber Zone. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+<script src="js/minimal.js"></script>
+</html>

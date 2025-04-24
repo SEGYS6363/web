@@ -1,0 +1,405 @@
+/* Стили для страницы Услуги */
+
+/* Hero секция */
+.services-hero-section {
+    position: relative;
+    padding: 128px 0;
+    overflow: hidden;
+}
+
+.services-hero-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('../img/services/перпвая\ фотка.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2;
+    z-index: 0;
+}
+
+.services-hero-content {
+    position: relative;
+    z-index: 10;
+}
+
+.services-hero-title {
+    font-size: 56px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    background: linear-gradient(to right, #22d3ee, #a855f7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.title-line {
+    height: 4px;
+    width: 128px;
+    background: linear-gradient(to right, #06b6d4, #a855f7);
+    margin-bottom: 32px;
+}
+
+.title-line.center {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 48px;
+}
+.cta-section{
+    padding: 50px 0px 50px 0px;
+
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.services-hero-subtitle {
+    font-size: 24px;
+    color: #22d3ee;
+    max-width: 768px;
+}
+
+/* Секция услуг */
+.services-grid-section {
+    position: relative;
+    padding: 80px 0;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.gradient-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(88, 28, 135, 0.1), rgba(22, 78, 99, 0.1));
+    z-index: 0;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    position: relative;
+    z-index: 10;
+}
+
+/* Анимация появления карточек услуг */
+.service-detail-card {
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    border: 1px solid #164e63;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeIn 0.8s forwards;
+    animation-play-state: paused;
+}
+
+.service-detail-card:nth-child(odd) {
+    animation-delay: 0.2s;
+}
+
+.service-detail-card:nth-child(even) {
+    animation-delay: 0.4s;
+}
+
+.service-detail-card.animated {
+    animation-play-state: running;
+}
+
+.service-detail-card:hover {
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+}
+
+.service-image {
+    position: relative;
+    height: 200px;
+}
+
+.service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.service-detail-card:hover .service-image img {
+    transform: scale(1.1);
+}
+
+.service-price {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background-color: #06b6d4;
+    color: #000;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 4px;
+    z-index: 10;
+}
+
+.service-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+}
+
+.service-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    background: linear-gradient(to right, #a855f7, #22d3ee);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.service-description {
+    text-align: center;
+    color: #d1d5db;
+    margin-bottom: 24px;
+    line-height: 1.6;
+}
+
+.service-features {
+    margin-bottom: 24px;
+}
+
+.features-title {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #fff;
+}
+
+.features-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.features-list li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 8px;
+    color: #d1d5db;
+}
+
+.features-list li i {
+    color: #22d3ee;
+    
+    flex-shrink: 0;
+}
+
+/* Пульсирующий эффект для кнопок при наведении на карточку */
+.service-detail-card:hover .btn {
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(6, 182, 212, 0.7);
+    }
+    
+    70% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 10px rgba(6, 182, 212, 0);
+    }
+    
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(6, 182, 212, 0);
+    }
+}
+
+/* Секция пакетов */
+.packages-section {
+    position: relative;
+    padding: 80px 0;
+    background: linear-gradient(to right, rgba(88, 28, 135, 0.3), rgba(22, 78, 99, 0.3));
+}
+
+.packages-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin-top: 48px;
+}
+
+/* Анимация появления пакетов */
+.package-card {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    border: 1px solid #a855f7;
+    border-radius: 8px;
+    padding: 32px;
+    transition: all 0.3s;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeIn 0.8s forwards;
+    animation-play-state: paused;
+}
+
+.package-card.basic {
+    animation-delay: 0.2s;
+}
+
+.package-card.pro {
+    animation-delay: 0.4s;
+    border: 2px solid #06b6d4;
+}
+
+.package-card.elite {
+    animation-delay: 0.6s;
+}
+
+.package-card.animated {
+    animation-play-state: running;
+}
+
+.package-card:hover {
+    transform: scale(1.05);
+}
+
+.package-card.basic:hover {
+    box-shadow: 0 0 15px rgba(128, 0, 255, 0.5);
+}
+
+.package-card.pro:hover {
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+}
+
+.package-card.elite:hover {
+    box-shadow: 0 0 15px rgba(128, 0, 255, 0.5);
+}
+
+.package-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #06b6d4;
+    color: #000;
+    font-weight: 700;
+    padding: 4px 16px;
+    font-size: 14px;
+}
+
+.package-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #a855f7;
+}
+
+.package-card.pro .package-title {
+    color: #22d3ee;
+}
+
+.package-description {
+    color: #d1d5db;
+    margin-bottom: 24px;
+}
+
+.package-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 24px 0;
+}
+
+.package-features li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 8px;
+    color: #d1d5db;
+}
+
+.package-features li i {
+    color: #a855f7;
+    margin-right: 8px;
+    flex-shrink: 0;
+}
+
+.package-card.pro .package-features li i {
+    color: #22d3ee;
+}
+
+.package-price {
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 24px;
+}
+
+.btn-package {
+    width: 100%;
+    background: linear-gradient(to right, #9333ea, #7e22ce);
+}
+
+.btn-package:hover {
+    background: linear-gradient(to right, #7e22ce, #6b21a8);
+}
+
+.btn-package-pro {
+    width: 100%;
+    background: linear-gradient(to right, #0891b2, #0e7490);
+}
+
+.btn-package-pro:hover {
+    background: linear-gradient(to right, #0e7490, #155e75);
+}
+
+/* Анимация появления элементов */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Медиа запросы */
+@media (min-width: 768px) {
+    .services-hero-title {
+        font-size: 72px;
+    }
+    
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .packages-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .service-detail-card {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .service-image {
+        height: 250px;
+    }
+    
+    .service-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .service-content .btn {
+        margin-top: auto;
+    }
+}

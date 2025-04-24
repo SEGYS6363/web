@@ -1,0 +1,399 @@
+/* Стили для страницы О клубе */
+
+/* Hero секция */
+.about-hero-section {
+    position: relative;
+    padding: 128px 0;
+    overflow: hidden;
+}
+.cta-section{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.about-hero-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('../img/about/Image\ 1.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2;
+    z-index: 0;
+}
+.container{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.about-hero-content {
+    position: relative;
+    z-index: 10;
+    display: block;
+    unicode-bidi: isolate;
+}
+
+.about-hero-title {
+    font-size: 56px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    background: linear-gradient(to right, #22d3ee, #a855f7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: block;
+    unicode-bidi: isolate;
+}
+
+.title-line {
+    height: 4px;
+    width: 128px;
+    background: linear-gradient(to right, #06b6d4, #a855f7);
+    margin: 0   auto;
+    
+}
+
+
+.about-hero-subtitle {
+    margin-top: 32px;
+    font-size: 24px;
+    color: #22d3ee;
+    max-width: 768px;
+}
+
+/* Секция "Наша история" */
+.our-story-section {
+    position: relative;
+    padding: 80px 0;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.story-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+}
+
+/* Обновление для размещения элементов поверх сетки */
+.grid-pattern {
+    position: absolute;
+    inset: 0;
+    background-image: 
+        linear-gradient(to right, rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 30px 30px;
+    z-index: 1; /* Уменьшаем z-index сетки */
+    pointer-events: none;
+}
+
+/* Анимация появления элементов */
+.story-content {
+    position: relative;
+    z-index: 10; /* Увеличиваем z-index контента */
+    justify-items: center;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeIn 0.8s forwards;
+    animation-delay: 0.2s;
+    animation-play-state: paused;
+}
+
+.story-content.animated {
+    animation-play-state: running;
+}
+
+.story-content h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    background: linear-gradient(to right, #a855f7, #22d3ee);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.story-text {
+    margin-top: 32px;
+    color: #d1d5db;
+    margin-bottom: 24px;
+    line-height: 1.6;
+}
+
+.story-images {
+    position: relative;
+    z-index: 10; /* Увеличиваем z-index изображений */
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeIn 0.8s forwards;
+    animation-delay: 0.4s;
+    animation-play-state: paused;
+}
+
+.story-images.animated {
+    animation-play-state: running;
+}
+
+.main-image {
+    position: relative;
+    height: 400px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+    border: 2px solid #06b6d4;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+    z-index: 10; /* Добавляем z-index для основного изображения */
+}
+
+.main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+}
+
+.secondary-image {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    height: 200px;
+    width: 200px;
+    border: 2px solid #a855f7;
+    box-shadow: 0 0 15px rgba(128, 0, 255, 0.5);
+    z-index: 11; /* Увеличиваем z-index для второго изображения */
+}
+
+.secondary-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Секция статистики */
+.stats-section {
+    position: relative;
+    padding: 64px 0;
+    background: linear-gradient(to right, rgba(88, 28, 135, 0.3), rgba(22, 78, 99, 0.3));
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 32px;
+}
+
+.stat-card {
+    position: relative;
+    z-index: 10; /* Увеличиваем z-index карточек статистики */
+    text-align: center;
+    padding: 24px;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    border: 1px solid #164e63;
+    border-radius: 8px;
+    transform: translateY(0);
+    transition: transform 0.3s;
+    opacity: 0;
+    animation: fadeIn 0.8s forwards;
+    animation-play-state: paused;
+}
+
+.stat-card:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.stat-card:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.stat-card:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.stat-card.animated {
+    animation-play-state: running;
+}
+
+.stat-card:hover {
+    transform: scale(1.05);
+}
+
+.stat-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    width: 48px;
+    margin: 0 auto 16px;
+}
+
+.stat-icon i {
+    font-size: 48px;
+    color: #22d3ee;
+}
+
+.stat-number {
+    font-size: 40px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.stat-label {
+    color: #22d3ee;
+}
+
+/* Секция "Наша команда" */
+.team-section {
+    position: relative;
+    padding: 80px 0;
+    background-color: #000;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 32px;
+    margin-top: 48px;
+}
+
+.team-member {
+    position: relative;
+    z-index: 10; /* Увеличиваем z-index для членов команды */
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    border: 1px solid #164e63;
+    border-radius: 8px;
+    overflow: hidden;
+    transform: translateY(0);
+    transition: all 0.3s;
+    opacity: 0;
+    animation: fadeIn 0.8s forwards;
+    animation-play-state: paused;
+}
+
+.team-member:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.team-member:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.team-member:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.team-member:nth-child(4) {
+    animation-delay: 0.5s;
+}
+
+.team-member.animated {
+    animation-play-state: running;
+}
+
+.team-member:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+}
+
+.member-image {
+    position: relative;
+    height: 300px;
+}
+
+.member-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.team-member:hover .member-image img {
+    transform: scale(1.1);
+}
+
+.team-member:hover .image-overlay {
+    opacity: 1;
+}
+
+.member-info {
+    padding: 24px;
+}
+.footer-bottom-1{
+    margin-top: 48px;
+    padding-top: 32px;
+    border-top: 1px solid rgba(6, 182, 212, 0.2);
+    text-align: center;
+    width: 1200px;
+}
+.container-1{
+
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+    justify-content: left;
+
+}
+
+.member-name {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.team-member:hover .member-name {
+    color: #22d3ee;
+}
+
+.member-role {
+    color: #a855f7;
+}
+
+/* CTA секция */
+.cta-section {
+    position: relative;
+    z-index: 10; /* Увеличиваем z-index для CTA секции */
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Медиа запросы */
+@media (min-width: 768px) {
+    .about-hero-title {
+        font-size: 72px;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .story-grid {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+    
+    .team-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

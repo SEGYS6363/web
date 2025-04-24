@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты - Cyber Zone</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Хедер -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">CYBER ZONE</a>
+                
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Главная</a></li>
+                        <li><a href="about.html" class="nav-link">О клубе</a></li>
+                        <li><a href="services.html" class="nav-link">Услуги</a></li>
+                        <li><a href="contact.html" class="nav-link active">Контакты</a></li>
+                    </ul>
+                </nav>
+                
+                <button class="btn btn-primary">Забронировать</button>
+                
+                <button class="menu-toggle" id="menuToggle">
+                    <span class="menu-icon"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Мобильное меню -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-container">
+            <button class="close-menu" id="closeMenu">×</button>
+            <ul class="mobile-nav-list">
+                <li><a href="index.html" class="mobile-nav-link">Главная</a></li>
+                <li><a href="about.html" class="mobile-nav-link">О клубе</a></li>
+                <li><a href="services.html" class="mobile-nav-link">Услуги</a></li>
+                <li><a href="contact.html" class="mobile-nav-link active">Контакты</a></li>
+            </ul>
+            <button class="btn btn-primary mobile-btn">Забронировать</button>
+        </div>
+    </div>
+
+    <main>
+        <!-- Секция Hero -->
+        <section class="contact-hero-section">
+            <div class="hero-overlay"></div>
+            <div class="grid-pattern"></div>
+            
+            <div class="container">
+                <div class="contact-hero-content">
+                    <h1 class="contact-hero-title">КОНТАКТЫ</h1>
+                    <div class="title-line"></div>
+                    <p class="contact-hero-subtitle">Свяжитесь с нами для бронирования, вопросов или чтобы присоединиться к нашему сообществу.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция формы контактов и информации -->
+        <section class="contact-section">
+            <div class="gradient-overlay"></div>
+            <div class="container">
+                <div class="contact-grid">
+                    <!-- Форма контактов -->
+                    <div class="contact-form-container">
+                        <h2 class="section-title">ОТПРАВИТЬ СООБЩЕНИЕ</h2>
+                        
+                        <div id="formSuccess" class="form-message success" style="display: none;">
+                            Ваше сообщение успешно отправлено! Мы свяжемся с вами в ближайшее время.
+                        </div>
+                        
+                        <div id="formError" class="form-message error" style="display: none;">
+                            Произошла ошибка при отправке сообщения. Пожалуйста, попробуйте еще раз.
+                        </div>
+                        
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-group">
+                                <label for="name">Имя</label>
+                                <input type="text" id="name" name="name" required placeholder="Ваше имя">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">Тема</label>
+                                <input type="text" id="subject" name="subject" required placeholder="Тема вашего сообщения">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Сообщение</label>
+                                <textarea id="message" name="message" required placeholder="Ваше сообщение..." rows="5"></textarea>
+                            </div>
+                            
+                            <div class="pdd"><button type="submit" class="btn btn-primary btn-full" id="submitBtn" >Отправить сообщение</button></div>
+                        </form>
+                    </div>
+                    
+                    <!-- Контактная информация -->
+                    <div class="contact-info-container">
+                        <h2 class="section-title">КОНТАКТНАЯ ИНФОРМАЦИЯ</h2>
+                        
+                        <div class="contact-info-list">
+                            <div class="contact-info-item">
+                                <div class="contact-icon location">
+                                    <i class="icon-map-pin" style="margin-top: -18px;"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h3>Местоположение</h3>
+                                    <p>ул. Кибер, 123, Цифровой район</p>
+                                    <p>Неон-Сити, 10101</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-info-item">
+                                <div class="contact-icon phone">
+                                    <i class="icon-phone" style="margin-top: -18px;"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h3>Телефон</h3>
+                                    <p>+7 (999) 123-4567</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-info-item">
+                                <div class="contact-icon email">
+                                    <i class="icon-mail" style="margin-top: -18px;"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h3>Email</h3>
+                                    <p>info@cyberzone.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-info-item">
+                                <div class="contact-icon hours">
+                                    <i class="icon-clock" style="margin-top: -18px;"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h3>Часы работы</h3>
+                                    <p>Понедельник - Воскресенье: 24/7</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <h3 class="social-title">Следите за нами</h3>
+                        <div class="social-links">
+                            <svg href="#" class="social-link facebook">
+                                <use href="./img/contact/symbol-defs.svg#icon-vk"></use>
+                            </svg>
+                            <svg href="#" class="social-link facebook">
+                                <use href="./img/contact/symbol-defs.svg#icon-telegram"></use>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция карты -->
+        <section class="map-section">
+            <div class="grid-pattern"></div>
+            <div class="container">
+                <h2 class="section-title">КАК НАС НАЙТИ</h2>
+                
+                <div class="map-container">
+                    <!-- В реальном проекте здесь будет интерактивная карта -->
+                    <div class="map-placeholder">
+                        <p>Интерактивная карта будет здесь</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h3 class="footer-logo">CYBER ZONE</h3>
+                    <p class="footer-description">Киберпанк игровой опыт будущего в самом сердце города.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4 class="footer-title">Быстрые ссылки</h4>
+                    <ul class="footer-nav">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="about.html">О клубе</a></li>
+                        <li><a href="services.html">Услуги</a></li>
+                        <li><a href="contact.html">Контакты</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-services">
+                    <h4 class="footer-title">Услуги</h4>
+                    <ul class="footer-nav">
+                        <li><a href="services.html">Игровые ПК</a></li>
+                        <li><a href="services.html">VR опыт</a></li>
+                        <li><a href="services.html">Турниры</a></li>
+                        <li><a href="services.html">Приватные комнаты</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4 class="footer-title">Контакты</h4>
+                    <address class="footer-address">
+                        <p>ул. Кибер, 123</p>
+                        <p>Цифровой район</p>
+                        <p>Неон-Сити, 10101</p>
+                        <p class="footer-email">info@cyberzone.com</p>
+                        <p class="footer-phone">+7 (999) 123-4567</p>
+                    </address>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright">&copy; <span id="currentYear"></span> Cyber Zone. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+<!-- Замените все ссылки на JS файлы в конце HTML файлов на: -->
+<script src="js/minimal.js"></script>
+</body>
+</html>

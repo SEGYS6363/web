@@ -1,0 +1,422 @@
+/* Стили для главной страницы */
+
+/* Hero секция */
+.hero-section {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(88, 28, 135, 0.2), rgba(22, 78, 99, 0.2));
+  z-index: 0;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('../img/style/ff173c54903719.596e6e1138092.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.3;
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Большая надпись вместо логотипа */
+.mega-title {
+  font-size: 180px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  background: linear-gradient(to right, #22d3ee, #a855f7);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-align: center;
+  line-height: 1;
+  letter-spacing: 4px;
+  text-shadow: 0 0 20px rgba(34, 211, 238, 0.5), 0 0 40px rgba(34, 211, 238, 0.3), 0 0 60px rgba(34, 211, 238, 0.2);
+  animation: glowPulse 3s infinite;
+}
+
+.hero-subtitle {
+  font-size: 24px;
+  margin-bottom: 32px;
+  color: #22d3ee;
+  text-align: center;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  animation: bounce 2s infinite;
+}
+
+.icon-arrow-down {
+  display: block;
+  width: 32px;
+  height: 32px;
+  color: #22d3ee;
+  transform: rotate(90deg);
+}
+
+/* Секция слайдера - CSS-анимация вместо JS */
+.slider-section {
+  position: relative;
+  padding: 80px 0;
+  background-color: #000;
+}
+
+.slider {
+  position: relative;
+  height: 500px;
+  margin-top: 48px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 2px solid #164e63;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+.slider-container {
+  height: 100%;
+  position: relative;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slide-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+}
+
+.slide-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 24px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+}
+
+/* CSS-анимация для автоматической смены слайдов */
+@keyframes slideshow {
+  0%, 25% {
+    opacity: 1;
+    z-index: 1;
+  }
+  33%, 100% {
+    opacity: 0;
+    z-index: 0;
+  }
+}
+
+.slide:nth-child(1) {
+  animation: slideshow 15s infinite;
+}
+
+.slide:nth-child(2) {
+  animation: slideshow 15s infinite 5s;
+}
+
+.slide:nth-child(3) {
+  animation: slideshow 15s infinite 10s;
+}
+
+.slide:nth-child(4) {
+  animation: slideshow 15s infinite 15s;
+}
+
+.slider-dots {
+  position: absolute;
+  bottom: 16px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  z-index: 10;
+}
+
+.slider-dot {
+  height: 8px;
+  width: 8px;
+  border-radius: 9999px;
+  background-color: #6b7280;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.slider-dot:hover {
+  background-color: #9ca3af;
+}
+
+.slider-dot.active {
+  width: 32px;
+  background-color: #22d3ee;
+}
+
+/* Секция превью услуг */
+.services-preview-section {
+  position: relative;
+  padding: 80px 0;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.gradient-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(88, 28, 135, 0.1), rgba(22, 78, 99, 0.1));
+  z-index: 0;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+
+/* Анимация при скролле для карточек услуг */
+.service-card {
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  border: 1px solid #164e63;
+  border-radius: 8px;
+  padding: 24px;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.6s ease-out;
+  text-align: center;
+}
+
+.service-card.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.service-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+}
+
+.service-icon {
+  display: inline-block;
+  margin-bottom: 16px;
+  padding: 16px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  border: 1px solid #164e63;
+  transition: border-color 0.3s;
+}
+
+.service-card:hover .service-icon {
+  border-color: #06b6d4;
+}
+
+.service-icon i {
+  font-size: 40px;
+  color: #22d3ee;
+}
+
+.service-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #fff;
+  transition: color 0.3s;
+  text-align: center;
+}
+
+.service-card:hover .service-title {
+  color: #22d3ee;
+}
+
+.service-description {
+  color: #9ca3af;
+  text-align: center;
+}
+
+.services-cta {
+  margin-top: 48px;
+  text-align: center;
+}
+
+/* CTA секция */
+.cta-section {
+  position: relative;
+  padding: 80px 0;
+  background: linear-gradient(to right, rgba(88, 28, 135, 0.3), rgba(22, 78, 99, 0.3));
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease-out;
+}
+
+.cta-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cta-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #fff;
+  text-align: center;
+}
+
+.cta-description {
+  font-size: 20px;
+  margin-bottom: 32px;
+  color: #22d3ee;
+  text-align: center;
+  max-width: 672px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+/* Убираем подчеркивание у всех ссылок */
+a {
+  text-decoration: none;
+}
+
+/* Убираем стрелочки у кнопок */
+.btn i {
+  display: none;
+}
+
+/* Анимации */
+@keyframes glowPulse {
+  0% {
+    text-shadow: 0 0 20px rgba(34, 211, 238, 0.5), 0 0 40px rgba(34, 211, 238, 0.3);
+    transform: scale(1);
+  }
+  50% {
+    text-shadow: 0 0 30px rgba(34, 211, 238, 0.7), 0 0 50px rgba(34, 211, 238, 0.5), 0 0 70px rgba(34, 211, 238, 0.3);
+    transform: scale(1.05);
+  }
+  100% {
+    text-shadow: 0 0 20px rgba(34, 211, 238, 0.5), 0 0 40px rgba(34, 211, 238, 0.3);
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Медиа запросы */
+@media (min-width: 768px) {
+  .mega-title {
+    font-size: 200px;
+  }
+  
+  .hero-subtitle {
+    font-size: 28px;
+  }
+  
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .mega-title {
+    font-size: 220px;
+  }
+  
+  .services-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .mega-title {
+    font-size: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mega-title {
+    font-size: 80px;
+  }
+}

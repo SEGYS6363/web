@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Услуги - Cyber Zone</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/services.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Хедер -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">CYBER ZONE</a>
+                
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Главная</a></li>
+                        <li><a href="about.html" class="nav-link">О клубе</a></li>
+                        <li><a href="services.html" class="nav-link active">Услуги</a></li>
+                        <li><a href="contact.html" class="nav-link">Контакты</a></li>
+                    </ul>
+                </nav>
+                
+                <button class="btn btn-primary">Забронировать</button>
+                
+                <button class="menu-toggle" id="menuToggle">
+                    <span class="menu-icon"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Мобильное меню -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-container">
+            <button class="close-menu" id="closeMenu">×</button>
+            <ul class="mobile-nav-list">
+                <li><a href="index.html" class="mobile-nav-link">Главная</a></li>
+                <li><a href="about.html" class="mobile-nav-link">О клубе</a></li>
+                <li><a href="services.html" class="mobile-nav-link active">Услуги</a></li>
+                <li><a href="contact.html" class="mobile-nav-link">Контакты</a></li>
+            </ul>
+            <button class="btn btn-primary mobile-btn">Забронировать</button>
+        </div>
+    </div>
+
+    <main>
+        <!-- Секция Hero -->
+        <section class="services-hero-section">
+            <div class="hero-overlay"></div>
+            <div class="grid-pattern"></div>
+            
+            <div class="container">
+                <div class="services-hero-content">
+                    <h1 class="services-hero-title">УСЛУГИ</h1>
+                    <div class="title-line"></div>
+                    <p class="services-hero-subtitle">Исследуйте наш ассортимент передовых игровых услуг и впечатлений.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция услуг -->
+        <section class="services-grid-section">
+            <div class="gradient-overlay"></div>
+            <div class="container">
+                <div class="services-grid">
+                    <div class="service-detail-card">
+                        <div class="service-image">
+                            <img src="img/about/комп.jpeg" alt="Мощные игровые ПК">
+                            <div class="service-price">5$/час</div>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Мощные игровые ПК</h3>
+                            <p class="service-description">Испытайте игры на наших современных компьютерах с видеокартами RTX 4090, процессорами AMD Ryzen 9, 32 ГБ ОЗУ и мониторами 240 Гц. Все ПК оснащены премиальной игровой периферией.</p>
+                            
+                            <div class="service-features">
+                                <h4 class="features-title">Особенности:</h4>
+                                <ul class="features-list">
+                                    <li><i class="icon-check"></i> Графика RTX 4090</li>
+                                    <li><i class="icon-check"></i> Процессоры AMD Ryzen 9</li>
+                                    <li><i class="icon-check"></i> 32 ГБ DDR5 RAM</li>
+                                    <li><i class="icon-check"></i> Игровые мониторы 240 Гц</li>
+                                    <li><i class="icon-check"></i> Премиальная периферия</li>
+                                </ul>
+                            </div>
+                            
+                            <button class="btn btn-primary">Забронировать</button>
+                        </div>
+                    </div>
+                    
+                    <div class="service-detail-card">
+                        <div class="service-image">
+                            <img src="img/style/vr.jpeg" alt="VR зона">
+                            <div class="service-price">10$/час</div>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">VR зона</h3>
+                            <p class="service-description">Шагните в виртуальные миры с нашими премиальными VR-установками, включающими новейшие гарнитуры и широкий выбор VR-игр и впечатлений.</p>
+                            
+                            <div class="service-features">
+                                <h4 class="features-title">Особенности:</h4>
+                                <ul class="features-list">
+                                    <li><i class="icon-check"></i> Новейшие VR гарнитуры</li>
+                                    <li><i class="icon-check"></i> Отслеживание движений</li>
+                                    <li><i class="icon-check"></i> Выделенная игровая зона</li>
+                                    <li><i class="icon-check"></i> Более 100 VR игр</li>
+                                    <li><i class="icon-check"></i> Многопользовательский опыт</li>
+                                </ul>
+                            </div>
+                            
+                            <button class="btn btn-primary">Забронировать</button>
+                        </div>
+                    </div>
+                    
+                    <div class="service-detail-card">
+                        <div class="service-image">
+                            <img src="img/style/rb,th nehybh.jpeg" alt="Киберспортивные турниры">
+                            <div class="service-price">Зависит от турнира</div>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Киберспортивные турниры</h3>
+                            <p class="service-description">Участвуйте в наших регулярных турнирах по популярным играм, таким как CS:GO, Valorant, Dota 2 и League of Legends. Выигрывайте призы и получайте признание в местном игровом сообществе.</p>
+                            
+                            <div class="service-features">
+                                <h4 class="features-title">Особенности:</h4>
+                                <ul class="features-list">
+                                    <li><i class="icon-check"></i> Еженедельные соревнования</li>
+                                    <li><i class="icon-check"></i> Денежные призы</li>
+                                    <li><i class="icon-check"></i> Прямые трансляции</li>
+                                    <li><i class="icon-check"></i> Профессиональные комментаторы</li>
+                                    <li><i class="icon-check"></i> Доступна командная регистрация</li>
+                                </ul>
+                            </div>
+                            
+                            <button class="btn btn-primary">Зарегистрироваться</button>
+                        </div>
+                    </div>
+                    
+                    <div class="service-detail-card">
+                        <div class="service-image">
+                            <img src="img/style/приват.jpg" alt="Приватные игровые комнаты">
+                            <div class="service-price">50$/час (до 6 человек)</div>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Приватные игровые комнаты</h3>
+                            <p class="service-description">Забронируйте приватную комнату для вас и ваших друзей, чтобы наслаждаться непрерывными игровыми сессиями, командными тренировками или особыми мероприятиями.</p>
+                            
+                            <div class="service-features">
+                                <h4 class="features-title">Особенности:</h4>
+                                <ul class="features-list">
+                                    <li><i class="icon-check"></i> Звукоизолированные комнаты</li>
+                                    <li><i class="icon-check"></i> Настраиваемое освещение</li>
+                                    <li><i class="icon-check"></i> Выделенный сервер</li>
+                                    <li><i class="icon-check"></i> Сервис напитков и закусок</li>
+                                    <li><i class="icon-check"></i> Настройка командной голосовой связи</li>
+                                </ul>
+                            </div>
+                            
+                            <button class="btn btn-primary">Забронировать</button>
+                        </div>
+                    </div>
+                    
+                    <div class="service-detail-card">
+                        <div class="service-image">
+                            <img src="img/style/стример.jpg" alt="Стриминг кабины">
+                            <div class="service-price">15$/час</div>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Стриминг кабины</h3>
+                            <p class="service-description">Используйте наши профессиональные стриминг-установки для создания контента, включая зеленые экраны, профессиональное освещение и высококачественное аудиооборудование.</p>
+                            
+                            <div class="service-features">
+                                <h4 class="features-title">Особенности:</h4>
+                                <ul class="features-list">
+                                    <li><i class="icon-check"></i> Профессиональные микрофоны</li>
+                                    <li><i class="icon-check"></i> Зеленый экран</li>
+                                    <li><i class="icon-check"></i> Stream Deck</li>
+                                    <li><i class="icon-check"></i> Комплект освещения</li>
+                                    <li><i class="icon-check"></i> Стриминговое ПО</li>
+                                </ul>
+                            </div>
+                            
+                            <button class="btn btn-primary">Забронировать</button>
+                        </div>
+                    </div>
+                    
+                    <div class="service-detail-card">
+                        <div class="service-image">
+                            <img src="img/style/аунж зона.jpg" alt="Игровое кафе и лаунж">
+                            <div class="service-price">Без минимальной покупки</div>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Игровое кафе и лаунж</h3>
+                            <p class="service-description">Расслабьтесь в нашей киберпанк-тематической зоне кафе с едой и напитками, пока вы делаете перерыв от игр или смотрите прямые трансляции турниров.</p>
+                            
+                            <div class="service-features">
+                                <h4 class="features-title">Особенности:</h4>
+                                <ul class="features-list">
+                                    <li><i class="icon-check"></i> Тематическая еда и напитки</li>
+                                    <li><i class="icon-check"></i> Большие экраны для просмотра</li>
+                                    <li><i class="icon-check"></i> Комфортные сидения</li>
+                                    <li><i class="icon-check"></i> Бесплатный Wi-Fi</li>
+                                    <li><i class="icon-check"></i> Магазин игровой атрибутики</li>
+                                </ul>
+                            </div>
+                            
+                            <button class="btn btn-primary">Посетить</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция пакетов -->
+        <section class="packages-section">
+            <div class="grid-pattern"></div>
+            <div class="container">
+                <h2 class="section-title">ПАКЕТНЫЕ ПРЕДЛОЖЕНИЯ</h2>
+                <div class="title-line center"></div>
+                
+                <div class="packages-grid">
+                    <div class="package-card basic">
+                        <h3 class="package-title">БАЗОВЫЙ ПАКЕТ</h3>
+                        <p class="package-description">Идеально для казуальных геймеров, желающих испытать наши возможности.</p>
+                        
+                        <ul class="package-features">
+                            <li><i class="icon-check"></i> 5 часов игры на ПК</li>
+                            <li><i class="icon-check"></i> 1 бесплатный напиток</li>
+                            <li><i class="icon-check"></i> Доступ к базовой библиотеке игр</li>
+                        </ul>
+                        
+                        <p class="package-price">20$</p>
+                        <button class="btn btn-package">Забронировать</button>
+                    </div>
+                    
+                    <div class="package-card pro">
+                        <div class="package-badge">ПОПУЛЯРНЫЙ</div>
+                        <h3 class="package-title">ПРО ПАКЕТ</h3>
+                        <p class="package-description">Разработан для серьезных геймеров, которые хотят получить полный опыт.</p>
+                        
+                        <ul class="package-features">
+                            <li><i class="icon-check"></i> 10 часов игры на ПК</li>
+                            <li><i class="icon-check"></i> 2 бесплатных напитка и 1 закуска</li>
+                            <li><i class="icon-check"></i> Полный доступ к библиотеке игр</li>
+                            <li><i class="icon-check"></i> 1 час VR опыта</li>
+                        </ul>
+                        
+                        <p class="package-price">45$</p>
+                        <button class="btn btn-package-pro">Забронировать</button>
+                    </div>
+                    
+                    <div class="package-card elite">
+                        <h3 class="package-title">ЭЛИТНЫЙ ПАКЕТ</h3>
+                        <p class="package-description">Максимальный опыт для настоящих энтузиастов игр.</p>
+                        
+                        <ul class="package-features">
+                            <li><i class="icon-check"></i> 20 часов игры на ПК</li>
+                            <li><i class="icon-check"></i> Неограниченные напитки и закуски</li>
+                            <li><i class="icon-check"></i> Полный доступ к библиотеке игр</li>
+                            <li><i class="icon-check"></i> 2 часа VR опыта</li>
+                            <li><i class="icon-check"></i> 1 час в приватной комнате</li>
+                        </ul>
+                        
+                        <p class="package-price">80$</p>
+                        <button class="btn btn-package">Забронировать</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция CTA -->
+        <section class="cta-section">
+            <div class="grid-pattern"></div>
+            <div class="container">
+                <h2 class="cta-title">НУЖНО ИНДИВИДУАЛЬНОЕ РЕШЕНИЕ?</h2>
+                <p class="cta-description">Свяжитесь с нами, чтобы обсудить индивидуальные пакеты для мероприятий, вечеринок или корпоративного тимбилдинга.</p>
+                <a href="contact.html" class="btn btn-primary">Связаться с нами <i class="icon-arrow-right"></i></a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h3 class="footer-logo">CYBER ZONE</h3>
+                    <p class="footer-description">Киберпанк игровой опыт будущего в самом сердце города.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4 class="footer-title">Быстрые ссылки</h4>
+                    <ul class="footer-nav">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="about.html">О клубе</a></li>
+                        <li><a href="services.html">Услуги</a></li>
+                        <li><a href="contact.html">Контакты</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-services">
+                    <h4 class="footer-title">Услуги</h4>
+                    <ul class="footer-nav">
+                        <li><a href="services.html">Игровые ПК</a></li>
+                        <li><a href="services.html">VR опыт</a></li>
+                        <li><a href="services.html">Турниры</a></li>
+                        <li><a href="services.html">Приватные комнаты</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4 class="footer-title">Контакты</h4>
+                    <address class="footer-address">
+                        <p>ул. Кибер, 123</p>
+                        <p>Цифровой район</p>
+                        <p>Неон-Сити, 10101</p>
+                        <p class="footer-email">info@cyberzone.com</p>
+                        <p class="footer-phone">+7 (999) 123-4567</p>
+                    </address>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright">&copy; <span id="currentYear"></span> Cyber Zone. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+<!-- Замените все ссылки на JS файлы в конце HTML файлов на: -->
+<script src="./js/minimal.js"></script>
+</body>
+</html>
