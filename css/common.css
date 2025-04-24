@@ -1,5 +1,3 @@
-/* Общие стили для всех страниц */
-
 /* Сброс стилей */
 * {
     margin: 0;
@@ -88,12 +86,12 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Убираем подчеркивание у всех ссылок */
+
 a {
     text-decoration: none;
 }
 
-/* Убираем стрелочки у кнопок */
+
 .btn i {
     display: none;
 }
@@ -116,10 +114,6 @@ a {
     align-items: center;
     justify-content: center;
     gap: 60px;
-    /* display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 64px; */
 }
 
 .logo {
@@ -348,7 +342,6 @@ a {
 /* Иконки */
 [class^="icon-"] {
     display: inline-block;
-    /* width: 16px; */
     height: 16px;
     stroke-width: 0;
     stroke: currentColor;
@@ -412,7 +405,7 @@ a {
     content: '✉️';
 }
 
-/* Исправление для иконок */
+
 [class^="icon-"]::before {
     display: inline-block;
     transform: none !important;
